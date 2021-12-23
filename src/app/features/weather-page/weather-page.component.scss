@@ -1,0 +1,25 @@
+.map-container {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+  cursor: crosshair;
+}
+span {
+  display: inline-block;
+  height: 20px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0 5px 0 5px;
+}

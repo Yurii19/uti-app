@@ -1,0 +1,26 @@
+.head-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: white;
+  h2 {
+    padding: 0 20px 0 20px;
+    margin: 0;
+  }
+}
+mat-list{
+  align-items: center;
+  display: flex;
+}
+mat-card {
+  display: flex;
+  align-items: center;
+  h3 {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+  }
+}
+.bottom-line {
+  border: 1px solid blue;
+}
