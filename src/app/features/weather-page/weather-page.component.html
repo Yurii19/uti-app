@@ -1,8 +1,16 @@
 <div class="map-container">
-  <span
-    ><i>Selected point : </i>Lat : {{ lat | number: ".3" }}, Lat :
-    {{ long | number: ".3" }}</span
-  >
+  <div class="dialog">
+    <span
+      ><i>Selected point : </i>Lat : {{ lat | number: ".3" }}, Lat :
+      {{ long | number: ".3" }}</span
+    >
+
+    <span class="temperature" *ngIf="temperatureAtPoint"
+      >Temperature at selected point is : <b>{{ temperatureAtPoint }}</b>. The nearest
+      populated locality - {{ city }}</span
+    >
+  </div>
+
   <div class="map-frame">
     <div id="map"></div>
   </div>
