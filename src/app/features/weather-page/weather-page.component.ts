@@ -10,11 +10,11 @@ import { WeatherService } from 'src/app/services/weather.service';
 export class WeatherPageComponent implements OnInit, AfterViewInit {
   lat = 0;
   long = 0;
-  temperatureAtPoint = null;
+  temperatureAtPoint = 0;
   city = '';
   markers: null | any = null;
-
   private map: any;
+  messageColor = 'primary';
 
   private initMap(): void {
     this.map = L.map('map', {
@@ -48,10 +48,16 @@ export class WeatherPageComponent implements OnInit, AfterViewInit {
       this.weather.getWeather(url).subscribe((resp: any) => {
         this.temperatureAtPoint = resp.main.temp;
         this.city = resp.name;
+        this.lat = e.latlng.lat;
+        this.long = e.latlng.lng;
         if (this.markers !== null) {
           this.map.removeLayer(this.markers);
         }
         this.markers = L.marker(e.latlng).addTo(this.map);
+        if (this.temperatureAtPoint){
+          this.temperatureAtPoint > 0 ? this.messageColor = 'warn' : this.messageColor = 'primary' ;
+        }
+        
       });
     });
   }

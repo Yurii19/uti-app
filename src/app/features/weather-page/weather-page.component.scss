@@ -1,10 +1,11 @@
 .map-container {
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 0;
   right: 0;
   bottom: 0;
   margin: 30px;
+  height: 85%;
 }
 
 .map-frame {
@@ -16,20 +17,12 @@
   height: 100%;
   cursor: crosshair;
 }
-span {
-  display: inline-block;
-  height: 20px;
-  background-color: white;
-  border: 1px solid black;
-  padding: 0 5px 0 5px;
-}
 .dialog {
   display: flex;
-  justify-content: flex-start;
-  span {
-    margin-right: 20px;
-  }
-  .temperature {
-    background-color: aquamarine;
-  }
+  justify-content: flex-start; 
+  border: 1px dotted red;
+}
+mat-chip-list {
+  margin: 0;
+  padding: 0;
 }
