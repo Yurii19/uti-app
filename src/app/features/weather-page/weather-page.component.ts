@@ -43,12 +43,11 @@ export class WeatherPageComponent implements OnInit, AfterViewInit {
     this.initMap();
 
     this.map.on('click', (e: any) => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.long}&appid=18141911a2204318380aeeac3872a83f&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${e.latlng.lat}&lon=${e.latlng.lng}&appid=18141911a2204318380aeeac3872a83f&units=metric`;
 
       this.weather.getWeather(url).subscribe((resp: any) => {
         this.temperatureAtPoint = resp.main.temp;
         this.city = resp.name;
-        console.log(resp);
         if (this.markers !== null) {
           this.map.removeLayer(this.markers);
         }
