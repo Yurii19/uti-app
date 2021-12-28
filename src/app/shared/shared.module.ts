@@ -11,6 +11,7 @@ import { CurrencyPageComponent } from '../features/currency-page/currency-page.c
 import { WeatherPageComponent } from '../features/weather-page/weather-page.component';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [CurrencyPageComponent, WeatherPageComponent],
@@ -25,7 +26,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatTableModule,
     MatListModule,
     MatChipsModule,
-    // import {MatChipsModule} from '@angular/material/chips';
+    MatGridListModule,
   ],
   exports: [CurrencyPageComponent, WeatherPageComponent],
 })

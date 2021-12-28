@@ -9,6 +9,7 @@ import { HeadComponent } from './features/head/head.component';
 import { MatListModule } from '@angular/material/list';
 import { SharedModule } from './shared/shared.module';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [AppComponent, HeadComponent],
@@ -18,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     HomeModule,
     BrowserAnimationsModule,
     MatListModule,
-    SharedModule, MatCardModule,
+    SharedModule, MatCardModule, MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
