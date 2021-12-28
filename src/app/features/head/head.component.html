@@ -1,17 +1,23 @@
-<div class="head-container">
-  <mat-card>
-    <h3>
-      Today :
-      <i> {{ date }}</i>
-    </h3>
-  </mat-card>
-  <mat-list role="list">
-    <mat-list-item role="listitem"><a routerLink="/">Home</a></mat-list-item>
-    <mat-list-item role="listitem"
-      ><a routerLink="/currency">Currency</a></mat-list-item
+<mat-grid-list cols="3" rowHeight="50px">
+  <mat-grid-tile
     >
-    <mat-list-item role="listitem"
-      ><a routerLink="/weather">Weather</a></mat-list-item
-    >
-  </mat-list>
-</div>
+    <mat-card>
+      <h3>
+        Today :
+        <i> {{ date }}</i>
+      </h3>
+    </mat-card>
+    </mat-grid-tile
+  >
+  <mat-grid-tile
+    ><mat-list role="list">
+      <mat-list-item role="listitem"><a routerLink="/">Home</a></mat-list-item>
+      <mat-list-item role="listitem"
+        ><a routerLink="/currency">Currency</a></mat-list-item
+      >
+      <mat-list-item role="listitem"
+        ><a routerLink="/weather">Weather</a></mat-list-item
+      >
+    </mat-list></mat-grid-tile
+  >
+</mat-grid-list>
